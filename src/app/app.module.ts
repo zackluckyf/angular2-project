@@ -19,6 +19,10 @@ import { AboutComponent } from './about';
 import { NoContentComponent } from './no-content';
 import { XLarge } from './home/x-large';
 import { ExampleModule } from './example-sub-module/example.module';
+import { TabsComponent } from './tabs/tabs.component';
+import { Tab1Component } from './tabs/tab1/tab1.component';
+import { Tab2Component } from './tabs/tab2/tab2.component';
+
 
 // Application wide providers
 const APP_PROVIDERS = [
@@ -42,7 +46,10 @@ type StoreType = {
     AboutComponent,
     HomeComponent,
     NoContentComponent,
-    XLarge
+    XLarge,
+    TabsComponent,
+    Tab1Component,
+    Tab2Component
   ],
   imports: [ // import Angular's modules
     BrowserModule,
