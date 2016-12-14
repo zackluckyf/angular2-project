@@ -1,0 +1,12 @@
+<div>
+    <div *ngFor="let item of items">
+        <button
+        (click)='singleClick()'
+        (dblclick)='doubleClick()'
+        [detectClick]>
+            {{item.name}}&nbsp;({{item.id}})
+        </button>
+    </div>
+    <input type="text" name="input-box" [(ngModel)]="text">
+    <button type="submit" (click)="addItem(text)">Add Item</button>
+</div>

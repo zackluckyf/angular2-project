@@ -22,6 +22,9 @@ import { ExampleModule } from './example-sub-module/example.module';
 import { TabsComponent } from './tabs/tabs.component';
 import { Tab1Component } from './tabs/tab1/tab1.component';
 import { Tab2Component } from './tabs/tab2/tab2.component';
+import { DetectClickDirective } from './complex-component/click-double-click.directive';
+import { GroupSelector } from './complex-component/complex.component';
+import { SharedService } from './complex-component/complex.service';
 
 
 // Application wide providers
@@ -49,7 +52,9 @@ type StoreType = {
     XLarge,
     TabsComponent,
     Tab1Component,
-    Tab2Component
+    Tab2Component,
+    DetectClickDirective,
+    GroupSelector
   ],
   imports: [ // import Angular's modules
     BrowserModule,
@@ -60,7 +65,8 @@ type StoreType = {
   ],
   providers: [ // expose our Services and Providers into Angular's dependency injection
     ENV_PROVIDERS,
-    APP_PROVIDERS
+    APP_PROVIDERS,
+    SharedService
   ]
 })
 export class AppModule {
