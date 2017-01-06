@@ -20,6 +20,7 @@ import { NoContentComponent } from './no-content';
 import { XLarge } from './home/x-large';
 import { ExampleModule } from './example-sub-module/example.module';
 import { TabsComponent } from './tabs/tabs.component';
+import { CalculatorComponent } from './calculator/calculator.component';
 import { Tab1Component } from './tabs/tab1/tab1.component';
 import { Tab2Component } from './tabs/tab2/tab2.component';
 import { DetectClickDirective } from './complex-component/click-double-click.directive';
@@ -54,7 +55,8 @@ type StoreType = {
     Tab1Component,
     Tab2Component,
     DetectClickDirective,
-    GroupSelector
+    GroupSelector,
+    CalculatorComponent
   ],
   imports: [ // import Angular's modules
     BrowserModule,
