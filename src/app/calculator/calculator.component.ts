@@ -9,11 +9,19 @@ export class CalculatorComponent implements OnInit {
     
     display: string = 'HELLO';
 
-    input(){}
+    username: string = '';
+    name: string = '';
 
-    eval(){}
-    
     constructor() { }
 
     ngOnInit() { }
+
+    input(){}
+    
+    eval(){}
+
+    submit(username: string) { 
+        console.log("setting username = ", username);
+        this.name = username;
+    }
 }

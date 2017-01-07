@@ -25,4 +25,12 @@
         <button (click)="input('+')">+</button>     
     </div>
 
+    <div>
+        <input type="text" name="username" placeholder="Enter username" [(ngModel)]="username"/>
+        <button (click)="submit(username)">Submit</button>
+    </div>
+    <div *ngIf="name">
+        {{name}}
+    </div>
+
 </div>
