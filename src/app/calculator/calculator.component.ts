@@ -7,8 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CalculatorComponent implements OnInit {
     
-    display: string = 'HELLO';
-
+    display: string = '';
     username: string = '';
     name: string = '';
 
@@ -16,12 +15,20 @@ export class CalculatorComponent implements OnInit {
 
     ngOnInit() { }
 
-    input(){}
-    
-    eval(){}
-
     submit(username: string) { 
         console.log("setting username = ", username);
         this.name = username;
+    }
+
+    input(char:string):void {
+        this.display += char;
+    }
+
+    eval():any {
+        this.display = eval(this.display);
+    }
+    
+    clear():void {
+        this.display = '';
     }
 }
