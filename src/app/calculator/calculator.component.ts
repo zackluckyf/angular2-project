@@ -7,11 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CalculatorComponent implements OnInit {
     
-    display: string = 'HELLO';
+    display: string = '';
 
-    input(){}
+    input(char:string):void {
+        this.display += char;
+    }
 
-    eval(){}
+    eval():any {
+        this.display = eval(this.display);
+    }
+    
+    clear():void {
+        this.display = '';
+    }
     
     constructor() { }
 
