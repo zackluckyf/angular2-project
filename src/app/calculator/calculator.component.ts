@@ -10,6 +10,13 @@ export class CalculatorComponent implements OnInit {
     display: string = '';
     username: string = '';
     name: string = '';
+    calc_keys: Array<string[]> = [
+        ['7','8','9','/'],
+        ['4','5','6','*'],
+        ['1','2','3','-'],
+        ['0','.','=','+'],
+        ['(',')','C','^']
+    ];
 
     constructor() { }
 
@@ -24,11 +31,17 @@ export class CalculatorComponent implements OnInit {
         this.display += char;
     }
 
-    eval():any {
+    eval():void {
         this.display = eval(this.display);
     }
     
     clear():void {
         this.display = '';
+    }
+    
+    determineFunction(key) {
+        if (key === '=') return this.eval();
+        if (key === 'C') return this.clear();
+        else return this.input(key);
     }
 }

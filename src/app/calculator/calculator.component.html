@@ -1,34 +1,8 @@
 <div id="calculator" class="row">
     <div>{{display}}</div>
-    <div class="row">
-        <button (click)="input('7')">7</button>
-        <button (click)="input('8')">8</button>
-        <button (click)="input('9')">9</button>
-        <button (click)="input('/')">/</button>
+    <div class="row" *ngFor="let row of calc_keys">
+        <button *ngFor="let key of row" (click)="determineFunction(key)">{{ key }}</button>
     </div>
-    <div class="row">
-        <button (click)="input('4')">4</button>
-        <button (click)="input('5')">5</button>
-        <button (click)="input('6')">6</button>
-        <button (click)="input('*')">*</button>
-    </div>
-    <div class="row">
-        <button (click)="input('1')">1</button>
-        <button (click)="input('2')">2</button>
-        <button (click)="input('3')">3</button>
-        <button (click)="input('-')">-</button>     
-    </div>
-    <div class="row">
-        <button (click)="input('0')">0</button>
-        <button (click)="input('.')">.</button>
-        <button (click)="eval()">=</button>
-        <button (click)="input('+')">+</button>     
-    </div>
-    <div class="row">
-        <button (click)="clear()">C</button>
-        <button (click)="input('^')">^</button>
-    </div>
-
     <div>
         <input type="text" name="username" placeholder="Enter username" [(ngModel)]="username"/>
         <button (click)="submit(username)">Submit</button>
@@ -36,5 +10,5 @@
     <div *ngIf="name">
         {{name}}
     </div>
-
 </div>
+

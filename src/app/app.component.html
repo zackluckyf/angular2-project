@@ -1,44 +1,47 @@
-<nav>
-      <span>
-        <a [routerLink]=" ['./'] ">
-          Index
-        </a>
-      </span>
-      |
-      <span>
-        <a [routerLink]=" ['./home'] ">
-          Home
-        </a>
-      </span>
-      |
-      <span>
-        <a [routerLink]=" ['./detail'] ">
-          Detail
-        </a>
-      </span>
-      |
-      <span>
-        <a [routerLink]=" ['./about'] ">
-          About
-        </a>
-      </span>
-    </nav>
 
-    <main>
-      <router-outlet></router-outlet>
-    </main>
+<!-- !!! To undo, uncomment the rest of this file and change the index path in app.routes to render HomeComponent -->
 
-    <pre class="app-state">this.appState.state = {{ appState.state | json }}</pre>
+<!--<nav>-->
+<!--  <span>-->
+<!--    <a [routerLink]=" ['./'] ">-->
+<!--      Index-->
+<!--    </a>-->
+<!--  </span>-->
+<!--  |-->
+<!--  <span>-->
+<!--    <a [routerLink]=" ['./home'] ">-->
+<!--      Home-->
+<!--    </a>-->
+<!--  </span>-->
+<!--  |-->
+<!--  <span>-->
+<!--    <a [routerLink]=" ['./detail'] ">-->
+<!--      Detail-->
+<!--    </a>-->
+<!--  </span>-->
+<!--  |-->
+<!--  <span>-->
+<!--    <a [routerLink]=" ['./about'] ">-->
+<!--      About-->
+<!--    </a>-->
+<!--  </span>-->
+<!--</nav>-->
 
-    <group-selector></group-selector>
+<main>
+  <router-outlet></router-outlet>
+</main>
 
-    <footer>
-      <span>WebPack Angular 2 Starter by <a [href]="url">@AngularClass</a></span>
-      <div>
-        <a [href]="url">
-          <img [src]="angularclassLogo" width="25%">
-        </a>
-      </div>
-    </footer>
-  
-    <calculator></calculator>
+<!--<pre class="app-state">this.appState.state = {{ appState.state | json }}</pre>-->
+
+<!--<group-selector></group-selector>-->
+
+<!--<footer>-->
+<!--  <span>WebPack Angular 2 Starter by <a [href]="url">@AngularClass</a></span>-->
+<!--  <div>-->
+<!--    <a [href]="url">-->
+<!--      <img [src]="angularclassLogo" width="25%">-->
+<!--    </a>-->
+<!--  </div>-->
+<!--</footer>-->
+
+<!--<calculator></calculator>-->

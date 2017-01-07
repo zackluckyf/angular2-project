@@ -6,10 +6,11 @@ import { TabsComponent } from './tabs/tabs.component';
 import { Tab1Component } from './tabs/tab1/tab1.component';
 import { Tab2Component } from './tabs/tab2/tab2.component';
 import { DataResolver } from './app.resolver';
+import { CalculatorComponent } from './calculator/calculator.component';
 
 
 export const ROUTES: Routes = [
-  { path: '',      component: HomeComponent },
+  { path: '',      component: CalculatorComponent },
   { path: 'home',  component: HomeComponent,
     children: [
       { path: '', redirectTo: 'tabs', pathMatch: 'full'},
