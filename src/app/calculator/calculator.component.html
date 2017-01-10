@@ -3,6 +3,7 @@
     <div class="row" *ngFor="let row of calc_keys">
         <button *ngFor="let key of row" (click)="determineFunction(key)">{{ key }}</button>
     </div>
+    <br />
     <div>
         <input type="text" name="username" placeholder="Enter username" [(ngModel)]="username"/>
         <button (click)="submit(username)">Submit</button>
