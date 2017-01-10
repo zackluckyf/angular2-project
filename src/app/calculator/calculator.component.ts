@@ -11,11 +11,11 @@ export class CalculatorComponent implements OnInit {
     username: string = '';
     name: string = '';
     calc_keys: Array<string[]> = [
-        ['7','8','9','/', ','],
-        ['4','5','6','*', '1/x'],
+        ['7','8','9','/', '1/x'],
+        ['4','5','6','*', 'rnd'],
         ['1','2','3','-', 'exp'],
         ['0','.','=','+', 'sqrt'],
-        ['(',')','C','%', 'Back']
+        ['(',')','C',',', 'Back']
     ];
 
     constructor() { }
@@ -37,6 +37,16 @@ export class CalculatorComponent implements OnInit {
     
     clear():void {
         this.display = '';
+    }
+    
+    reciprocal():void {
+        let dsp = this.display;
+        if (dsp.search(/[^0-9.]/) === -1) this.display = (1/Number(dsp)).toString();
+    }
+    
+    round():void {
+        let dsp = this.display;
+        if (dsp.search(/[^0-9.]/) === -1) this.display = Math.round(Number(dsp)).toString();
     }
     
     exponent():void {
@@ -62,6 +72,8 @@ export class CalculatorComponent implements OnInit {
     determineFunction(key) {
         if (key === '=') return this.eval();
         if (key === 'C') return this.clear();
+        if (key === '1/x') return this.reciprocal();
+        if (key === 'rnd') return this.round();
         if (key === 'exp') return this.exponent();
         if (key === 'sqrt') return this.sqrt();
         if (key === 'Back') return this.backspace();
